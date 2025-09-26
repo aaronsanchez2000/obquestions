@@ -41,7 +41,7 @@ body {
 
 header {
   grid-area: header;
-  background: var(--color-accent);
+  background: var(--color-primary);
   color: #fff;
   padding: 1.5rem;
   text-align: center;
