@@ -1,0 +1,108 @@
+:root {
+  --font-base: "Poppins", sans-serif;
+  --font-header: "Oswald", sans-serif;
+  --color-bg: #f9fafc;
+  --color-text: #111827;
+  --color-primary: #1034a6; /* company blue */
+  --color-accent: #4c39ac; /* company purple */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: var(--font-header);
+  font-size: 1.75rem;
+  border-bottom: 4px solid #fff;
+  text-transform: uppercase;
+}
+
+main {
+  grid-area: main;
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+footer {
+  grid-area: footer;
+  display: none;
+}
+
+#generate-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-base);
+  width: 25rem;
+  height: 5rem;
+}
+
+#generate-btn:hover {
+  background: #6d5bd0;
+  transform: translateY(-2px);
+}
+
+#questions-container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  display: none; /* only until js populates */
+}
+
+.question {
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-heading);
+}
