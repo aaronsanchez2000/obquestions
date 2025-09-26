@@ -59,7 +59,7 @@ main {
   justify-content: center;
   padding: 2rem;
   gap: 2rem;
-  background: linear-gradient(135deg, #1034a6 0%, #4c39ac 100%);
+  background: linear-gradient(135deg, #1034a6 0%, #4c39ac 75%);
   overflow: hidden;
 }
 
